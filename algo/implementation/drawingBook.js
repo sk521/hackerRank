@@ -1,6 +1,17 @@
 function pageCount(n, p) {
-  if (n % 2 === 0);
-  return Math.min(Math.floor(p / 2), Math.floor((n / 2) - (p / 2)));
+  if (n % 2 === 0) {
+    if (p <= n / 2) {
+      return Math.floor(p / 2);
+    } else {
+      return Math.ceil((n - p) / 2);
+    }
+  } else {
+    if (p <= n / 2) {
+      return Math.floor(p / 2);
+    } else {
+      return Math.floor((n - p) / 2);
+    }
+  }
 }
 
 
